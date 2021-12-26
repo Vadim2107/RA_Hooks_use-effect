@@ -6,7 +6,7 @@ export default function Details (props) {
     const [isLoading, setLoading] = useState(true);
     const [user, setUser] = useState({});
 
-    console.log(id);
+    // console.log(id);
 
     useEffect(() => {
         if(typeof(id) === 'number') {
@@ -20,6 +20,8 @@ export default function Details (props) {
                     })
             } catch (e) {
                 console.error(e);
+            } finally {
+                return;
             }
         }
     }, [id]);
