@@ -21,7 +21,7 @@ export default function Details (props) {
             } catch (e) {
                 console.error(e);
             } finally {
-                return;
+                setLoading(false);
             }
         }
     }, [id]);
